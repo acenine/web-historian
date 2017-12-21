@@ -16,7 +16,9 @@ exports.serveAssets = function(res, asset, callback) {
   // css, or anything that doesn't change often.)
 
   // requestHandler takes '/', its related files, all requests to archive
-    //
+  fs.readFile(res, asset, function(asset) {
+    callback(asset);
+  });
 };
 
 
